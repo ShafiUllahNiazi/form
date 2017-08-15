@@ -319,7 +319,7 @@ if($("#family-field").css('display') != 'none'){
 		$("#marriedMem-error").html("Invalid Input!");
 		output = false;
 	}
-	if(!$("#applicant_earning_members").val().match(/^[0-9]*$/)) {
+	if(!$("#applicant_earning_members").val().match(/^[0-9]+$/)) {
 		$("#earningMem-error").html("Invalid Input!");
 		output = false;
 	}
