@@ -1,4 +1,4 @@
-<DIV class="product-item float-clear" >
+<DIV class="product-item float-clear" style="width:80%; margin-left:10%; margin-right:10%;">
 
 
 <div>
@@ -7,36 +7,41 @@
 </div>
 
 <div class="container col-sm-12" >
-	<DIV class="col-sm-2 "></DIV>
+	
 
 
-</div>
+
+<table class="table table-hover" >
+<tr>
+<th>Transport Type (Car/ Motor cycle/ Others*)<span id="tType-error" class="signup-error"></span></th>
+<th>Make /Model<span id="tmodel-error" class="signup-error"></span></th>
+<th>Engine Capacity (CC)<span id="tCC-error" class="signup-error"></span></th>
+<th>Registration No.<span id="tReg-error" class="signup-error"></span></th>
+<th>Ownership Period<span id="townP-error" class="signup-error"></span></th>
+
+</tr>
+<tr>
+<td>
+	<input type="text" name="TransportType[]" id="tType" class="form-control"/>
+</td>
+<td>
+	<input type="text" name="Model[]" id="tmodel" class="form-control"/>
+</td>
+<td>
+	<input type="text" name="EngineCapacity[]" id="tCC" class="form-control"/>
+</td>
+<td>
+	<input type="text" name="RegNo[]" id="tReg" class="form-control"/>
+</td>
+<td>
+	<input type="text" name="OwnPeriod[]" id="townP" class="form-control"/>
+</td>
+
+</tr>
 
 
-<div class="container col-sm-4">
-		<DIV class="col-sm-12 ">Transport Type (Car/ Motor cycle/ Others*)<span id="tType-error" class="signup-error"></span></DIV>
-		<DIV class="float-left"><input type="text" name="TransportType[]" id="tType" class="form-control"/></DIV>
-</div>
-
-<div class="container col-sm-4">
-		<DIV class="col-sm-8 ">Make /Model</DIV><span id="tmodel-error" class="signup-error"></span>
-		<DIV class="float-left"><input type="text" name="Model[]" id="tmodel" class="form-control"/></DIV>
-</div>
-
-<div class="container col-sm-4">
-		<DIV class="col-sm-8 ">Engine Capacity (CC)</DIV><span id="tCC-error" class="signup-error"></span>
-		<DIV class="float-left"><input type="text" name="EngineCapacity[]" id="tCC" class="form-control"/></DIV>
-</div>
-<div class="container col-sm-4">
-		<DIV class="col-sm-8 ">Registration No.</DIV><span id="tReg-error" class="signup-error"></span>
-		<DIV class="float-left"><input type="text" name="RegNo[]" id="tReg" class="form-control"/></DIV>
-</div>
-<div class="container col-sm-4">
-		<DIV class="col-sm-8 ">Ownership Period</DIV><span id="townP-error" class="signup-error"></span>
-		<DIV class="float-left"><input type="text" name="OwnPeriod[]" id="townP" class="form-control"/></DIV>
-</div>
-
-
+</table>
+</DIV>
 
 <DIV class="float-left"><input type="checkbox" name="item_index[]" class="form-control"/></DIV><br>
 <div>

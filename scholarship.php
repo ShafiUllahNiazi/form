@@ -1,4 +1,4 @@
-<DIV class="product-item float-clear">
+<DIV class="product-item float-clear" style="width:70%; margin-left:10%; ">
 
 <div>
 	<H1>Scholarship Details  </h1>
@@ -52,8 +52,9 @@
 
 </td>
 </tr>
-<DIV class="float-left"><input type="checkbox" name="item_index[]" class="form-control"/></DIV><br>
+
 
 </table>
 </DIV>
+<DIV class="float-left"><input type="checkbox" name="item_index[]" class="form-control"/></DIV>
 </div>

@@ -1,6 +1,9 @@
 <div class="product-item float-clear">
 	
 	<div class="col-sm-12">
+		<h2>Family Details</h2>
+	</div>
+	<div class="col-sm-12">
 		<div class="col-sm-3">
 			<label>Residence Telephone:</label><span id="telephone-error" class="signup-error"></span>
 			<div><input type="text" name="applicant_residence_telephone" id="applicant_residence_telephone" placeholder="Type your Telephone no." class="form-control"/></div>

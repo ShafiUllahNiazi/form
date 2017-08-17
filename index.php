@@ -196,7 +196,10 @@ function deleteAssetIncome() {
 			</DIV>
 		</div>
 		<div id="sblings1-field" style="display:none;">
-
+			
+			<div class="col-sm-12">
+				<h2>Siblings Detail</h2>
+			</div>
 			<DIV id="outer">
 
 				<DIV id="sblings">
@@ -210,6 +213,9 @@ function deleteAssetIncome() {
 			</DIV>
 		</div>
 		<div id="ik-field" style="display:none;">
+			<div class="col-sm-12">
+				<h2>Earning member information</h2>
+			</div>
 			<DIV id="outer">
 
 				<DIV id="productik">
@@ -223,6 +229,10 @@ function deleteAssetIncome() {
 			</DIV>
 		</div>
 		<div id="AssetIncome1-field" style="display:none;">
+			<div style="width:70%; margin-left:10%; ">
+				<h2>Asset Income</h2>(on monthly basis)
+			</div>
+		
 			<DIV id="outer">
 
 				<DIV id="AssetIncome">
@@ -266,7 +276,7 @@ function deleteAssetIncome() {
 		</div>
 		
 		<div id="Transport-field" style="display:none;">
-			<div>
+			<div style="width:70%; margin-left:10%;">
 				<h1>Section C:</h1>
 				<h2>Cumulative information of Self, Parents and Guardian Assets</h2>
 			</div>
@@ -307,6 +317,11 @@ function deleteAssetIncome() {
 			</DIV>
 		</div>
 		<div id="password-field" style="display:none;">
+			<div style="width:70%; margin-left:10%;">
+				<h1>Section D:</h1>
+				<h2>Financial arrangements for current year</h2>
+				<p> Funds Availability for Applicant Education (per annum in Pak Rupees) </p>
+			</div>
 			<DIV id="outer">
 				<DIV id="product">
 					<?php require_once("fundAvailability.php") ?>
@@ -418,9 +433,9 @@ require_once ('connection.inc.php');
 			       
 			        $sql="INSERT INTO `applicant_scholarship`(`applicant_id`, `applicant_institute`, `educational_level`, `scholarship_name`, `scholarship_amount`, `scholarship_period`) VALUES('$apid','$scholarship_institute','$scholarship_level','$scholarship_name','$scholarship_amount','$scholarship_period')";
                       if ($mysqli->query($sql)) {
-                        echo "Submited scholarship";
+                        //echo "Submited scholarship";
                       } else {
-                     echo "Failed scholarship";
+                     //echo "Failed scholarship";
                      }
                      
 			
@@ -428,7 +443,7 @@ require_once ('connection.inc.php');
 		}
 		$itemCount = count($_POST["ins"]);
 		$itemValues=0;
-		
+		$feesexpenditures=0;
 		
 		for($i=0;$i<$itemCount;$i++) {
 				$itemValues++;
@@ -437,13 +452,14 @@ require_once ('connection.inc.php');
 			 $ins= $_POST["ins"][$i];
 			  $mnthlyfee= $_POST["mnthlyfee"][$i];
 			   $tutionfee= $_POST["tutionfee"][$i];
+			   $feesexpenditures+=$_POST["mnthlyfee"][$i]+$_POST["tutionfee"][$i];
 			$apid=$_SESSION['username'];
 			       
 			        $sql="INSERT INTO `sibblings_studying`(`applicant_id`, `sibbling_name`, `sibbling_relation`, `sibbling_institue`, `sibbling_monthly_fee`, `sibbling_tution_fee`) VALUES ('$apid','$name','$relation','$ins','$mnthlyfee','$tutionfee')";
                       if ($mysqli->query($sql)) {
-                        echo "Submited Sibblings";
+                        //echo "Submited Sibblings";
                       } else {
-                     echo "Failed Sibblings";
+                     //echo "Failed Sibblings";
                      }
                      
 			
@@ -451,19 +467,22 @@ require_once ('connection.inc.php');
 		}
 		$itemCount = count($_POST["AssetTitle"]);
 		    $itemValues=0;
+			$reportworth=0;
 		for($i=0;$i<$itemCount;$i++) {
 			
 				$itemValues++;
 			$AssetTitle=  $_POST["AssetTitle"][$i]; 
 			 $AssetHolderRelation= $_POST["AssetHolderRelation"][$i];
 			 $AssetTotal= $_POST["AssetTotal"][$i];
+			 $reportworth=$_POST["AssetTotal"][$i];
+			 
 			   $apid=$_SESSION['username'];
 			       
 			        $sql="INSERT INTO `assets_worth`( `applicant_id`, `assets_title`, `asset_holdr_reltion`, `total`) VALUES('$apid','$AssetTitle','$AssetHolderRelation','$AssetTotal')";
                       if ($mysqli->query($sql)) {
-                        echo "Submited asstes worth";
+                       // echo "Submited asstes worth";
                       } else {
-                     echo "Failed assets_worth";
+                     //echo "Failed assets_worth";
                      }
                      
 			
@@ -485,9 +504,9 @@ require_once ('connection.inc.php');
 			       
 			        $sql="INSERT INTO `transport_assets`(`applicant_id`, `transport_type`, `transport_model`, `transport_engine`, `transport_registration`, `ownership_period`) VALUES('$apid','$TransportType','$Model','$EngineCapacity','$RegNo','$OwnPeriod')";
                       if ($mysqli->query($sql)) {
-                        echo "Submited TransportType";
+                       // echo "Submited TransportType";
                       } else {
-                     echo "Failed TransportType";
+                     //echo "Failed TransportType";
                      }
                      
 			
@@ -520,6 +539,7 @@ require_once ('connection.inc.php');
 			$applicant_age=$_POST["applicant_age"];
 			$applicant_id=$_POST["applicant_id"];
 			$applicant_name=$_POST["applicant_name"];
+			$applicant_father=$_POST["applicant_father"];
 			$applicant_gender=$_POST["applicant_gender"];
 			$applicant_cnic=$_POST["applicant_cnic"];
 			$applicant_birth_place=$_POST["applicant_birth_place"];
@@ -538,11 +558,12 @@ require_once ('connection.inc.php');
 			$earningsoruce = count($_POST["income_relation"]);
 			$itemValues=0;
 
-
+		$reportfund=0;
 		for($i=0;$i<$earningsoruce;$i++) {
 			$income_source= $_POST["income_source"][$i];
 			$income_relation= $_POST["income_relation"][$i];
 			$icome_price1= $_POST["icome_price1"][$i];
+			$reportfund+=$_POST["icome_price1"][$i];
 			$sql="INSERT INTO `funds_availablity`(`sr_no`, `applicant_id`, `funds_frm_income`, `provider_relation`, `funds_amount`) VALUES (NULL,'$applicant_id','$income_source','$income_relation','$icome_price1')";
 			$res=mysqli_query($mysqli,$sql); 
 		}
@@ -550,18 +571,19 @@ require_once ('connection.inc.php');
 		$earningsoruce = count($_POST["income_source_astincone"]);
 			$itemValues=0;
 
-
+		$aincome=0;
 		for($i=0;$i<$earningsoruce;$i++) {
 			$income_source_astincone= $_POST["income_source_astincone"][$i];
 			$income_relation_astincone= $_POST["income_relation_astincone"][$i];
 			$price_astincone= $_POST["price_astincone"][$i];
+			$aincome+=$_POST["price_astincone"][$i];
 			 $apid=$_SESSION['username'];
 			$sql="INSERT INTO  `assets_income`(`sr_no`, `applicant_id`, `asset_info`, `relation`, `toal`) VALUES (NULL,'$apid','$income_source_astincone','$income_relation_astincone','$price_astincone')";
 			$res=mysqli_query($mysqli,$sql); 
 		}
 		
 		////////
-		$sql="INSERT INTO `personal_info` (`sr_no`, `applicant_id`, `applicant_name`, `applicant_gender`, `applicant_cnic`, `applicant_age`, `applicant_birth_place`, `applicant_present_address`, `applicant_permenent_address`, `applicant_residence_telephone`, `applicant_mobile`, `applicant_email`, `applicant_total_family_members`, `applicant_living_family_members`, `applicant_married_family_members`, `applicant_earning_members`, `applicant_not_earning_members`, `applicant_studying_members`) VALUES (NULL, '$applicant_id', '$applicant_name', '$applicant_gender', '$applicant_cnic', '$applicant_age', '$applicant_birth_place', '$applicant_present_address', '$applicant_permenent_address', '$applicant_residence_telephone', '$applicant_mobile', '$applicant_email', '$applicant_total_family_members', '$applicant_living_family_members', '$applicant_married_family_members', '$applicant_earning_members', '$applicant_not_earning_members', '$applicant_studying_members')";
+		$sql="INSERT INTO `personal_info` (`sr_no`, `applicant_id`, `applicant_name`,`applicant_father` ,`applicant_gender`, `applicant_cnic`, `applicant_age`, `applicant_birth_place`, `applicant_present_address`, `applicant_permenent_address`, `applicant_residence_telephone`, `applicant_mobile`, `applicant_email`, `applicant_total_family_members`, `applicant_living_family_members`, `applicant_married_family_members`, `applicant_earning_members`, `applicant_not_earning_members`, `applicant_studying_members`) VALUES (NULL, '$applicant_id', '$applicant_name','$applicant_father' ,'$applicant_gender', '$applicant_cnic', '$applicant_age', '$applicant_birth_place', '$applicant_present_address', '$applicant_permenent_address', '$applicant_residence_telephone', '$applicant_mobile', '$applicant_email', '$applicant_total_family_members', '$applicant_living_family_members', '$applicant_married_family_members', '$applicant_earning_members', '$applicant_not_earning_members', '$applicant_studying_members')";
         $res=mysqli_query($mysqli,$sql); 
 		
   if($res){
@@ -579,15 +601,15 @@ require_once ('connection.inc.php');
 		$water6=$_POST['water6'];
 		$mob6=$_POST['mob6'];
 		
-		$total6=$_POST['total6'];
+		
 		
 		
 		$food=$_POST['food'];
 		$servant=$_POST['servant'];
 		$medical=$_POST['medical'];
 		$travel=$_POST['travel'];
-		
-		$sqlex="INSERT INTO `other_expenditures`(`sr_no`, `applicant_id`, `telephone_last`, `electricity_last`, `gas_last`, `water_last`, `mobile_last`, `telephone_six`, `electricity_six`, `gas_six`, `water_six`, `mobile_six`, `kitchen_expenditures`, `servent_expenditures`, `utility_expenditures`, `medical_expenditures`, `traveling_expenditures`) VALUES (NULL,'$applicant_id','$tel','$elec','$gas','$water','$mob','$tel6','$elec6','$gas6','$water6','$mob6','$food', '$servant','$total6','$medical','$travel')";
+		$homeexpenditure=$elec6+$tel6+$gas6+$water6+$mob6+$food+$servant+$medical+$travel;
+		$sqlex="INSERT INTO `other_expenditures`(`sr_no`, `applicant_id`, `telephone_last`, `electricity_last`, `gas_last`, `water_last`, `mobile_last`, `telephone_six`, `electricity_six`, `gas_six`, `water_six`, `mobile_six`, `kitchen_expenditures`, `servent_expenditures`,`medical_expenditures`, `traveling_expenditures`) VALUES (NULL,'$applicant_id','$tel','$elec','$gas','$water','$mob','$tel6','$elec6','$gas6','$water6','$mob6','$food', '$servant','$medical','$travel')";
 		 $resex=mysqli_query($mysqli,$sqlex); 
 		 
 		 $educational = count($_POST["institute"]);
@@ -620,7 +642,7 @@ require_once ('connection.inc.php');
 			$price_astincone= $_POST["price_astincone"][$i];
 			
 			
-			$sqlei="INSERT INTO `assets_earning`(`sr_no`, `applicant_id`, `assets_title`, `assets_relation`, `assets_price`, `assets_total`) VALUES (NULL,'$applicant_id','$income_source_astincone','$income_relation_astincone','$price_astincone','1000')";
+			$sqlei="INSERT INTO `assets_earning`(`sr_no`, `applicant_id`, `assets_title`, `assets_relation`, `assets_price`) VALUES (NULL,'$applicant_id','$income_source_astincone','$income_relation_astincone','$price_astincone')";
 			$resei=mysqli_query($mysqli,$sqlei); 
 		}
 		
@@ -628,7 +650,7 @@ require_once ('connection.inc.php');
 		$earnerscount = count($_POST["name1"]);
 		$itemValues=0;
 		
-		
+		$tsum=0;
 		for($i=0;$i<$earnerscount;$i++) {
 			
 				
@@ -639,6 +661,8 @@ require_once ('connection.inc.php');
 			  $org= $_POST["org"][$i];
 			   $dsg= $_POST["dsg"][$i];
 			    $mearng= $_POST["mearng"][$i];
+				
+				$tsum+=$_POST["mearng"][$i];
 			    $rmrks= $_POST["rmrks"][$i];
 			    //$anlincome= $_POST["anlincome"][$i]; 
 			 $cnic= $_POST["cnic"][$i];
@@ -651,11 +675,12 @@ require_once ('connection.inc.php');
 			    $grade= $_POST["grade"][$i];
 			    $ntn= $_POST["ntn"][$i];
 			       
-			       $sqlearn="INSERT INTO `earning_info`(`applicant_id`, `earning_member_name`, `earning_member_relation`, `earning_member_occupation`, `earning_member_organization`, `earning_member_designation`, `earning_member_monthly_earning`, `earning_member_remarks`, `earning_member_annual_income`, `earning_member_cnic`, `earning_member_status`, `earning_member_professional_status`, `earning_member_company_name`, `earning_member_address`, `earning_member_mobile`, `earning_member_office_number`, `earning_member_grade`, `earning_member_ntn`) VALUES
+			       $sqlearn="INSERT INTO `earning_info`(`applicant_id`, `earning_member_name`, `earning_member_relation`, `earning_member_occupation`, `earning_member_organization`, `earning_member_designation`, `earning_member_monthly_earning`, `earning_member_remarks`, `earning_member_cnic`, `earning_member_status`, `earning_member_professional_status`, `earning_member_company_name`, `earning_member_address`, `earning_member_mobile`, `earning_member_office_number`, `earning_member_grade`, `earning_member_ntn`) VALUES
 			        ('$apid','$name','$relation1','$ocp','$org','$dsg','$mearng','$rmrks','$cnic','$status','$prf_status','$cmpny_name','$address','$mobile','$office_num','$grade','$ntn')";
 					$researn=mysqli_query($mysqli,$sqlearn); 
 					
 		}
+		
 		$agriLand = count($_POST["Qty"]);
 		 
 			$itemValues=0;
@@ -685,8 +710,9 @@ require_once ('connection.inc.php');
 		$BedRoom=$_POST['BedRoom'];
 		$Airconditioner=$_POST['Airconditioner'];
 		$mRent=$_POST['mRent'];
+		
 		//$aRent=$_POST['aRent'];
-		$sqleex="INSERT INTO `accomodation_expenditure`(`sr_no`, `applicant_id`, `accomodation_type`, `accomodation_status`, `accomodation_ownership`, `accomodation_rent_provider`, `accomodation_size`, `accomodation_area`, `accomodation_value`, `accomodation_address`, `accomodation_bedroom`, `accomodation_ac`, `accomodation_rent`, `accomodation_annual`) VALUES (NULL,'$applicant_id','$housetype','$rented','$Inherited','$Self','$PlotSize','$CoveredArea','$CurrentMarketValue', '$AAdd','$BedRoom','$Airconditioner','$mRent')";
+		$sqleex="INSERT INTO `accomodation_expenditure`(`sr_no`, `applicant_id`, `accomodation_type`, `accomodation_status`, `accomodation_ownership`, `accomodation_rent_provider`, `accomodation_size`, `accomodation_area`, `accomodation_value`, `accomodation_address`, `accomodation_bedroom`, `accomodation_ac`, `accomodation_rent`) VALUES (NULL,'$applicant_id','$housetype','$rented','$Inherited','$Self','$PlotSize','$CoveredArea','$CurrentMarketValue', '$AAdd','$BedRoom','$Airconditioner','$mRent')";
 		$reseex=mysqli_query($mysqli,$sqleex); 
 		
 		   $v1=rand(1111,9999);
@@ -888,13 +914,13 @@ if ($_FILES['bnkst']['size'] != 0)
 // $scrdoc="NULL";
 // $ppdoc="NULL";
 // $bnkst="NULL";
-echo $ectrcty;
-echo "<br>";
-echo $gas;
-echo "<br>";
-echo $tlphn;
-echo "<br>";
-echo $watr;
+//echo $ectrcty;
+//echo "<br>";
+//echo $gas;
+//echo "<br>";
+//echo $tlphn;
+//echo "<br>";
+//echo $watr;
 
 
    
@@ -911,12 +937,20 @@ $check=mysqli_query($mysqli,$query);
 		$MedicineSt=$_POST['MedicineSt'];
 		$MobileSt=$_POST['MobileSt'];
 		$TravellingSt=$_POST['TravellingSt'];
+		$personalexpenditures=$clgFee+$hostalFee+$FoodSt+$MedicineSt+$MobileSt+$TravellingSt;
 		$stdquery="INSERT INTO `personal_expendtiures`(`id`, `applicant_id`, `applicant_food_ex`, `applicant_clg_fee`, `applicant_hostel_fee`, `applicant_medicine_ex`, `applicant_mobile_ex`, `applicant_traveling_ex`) VALUES (NULL,'$applicant_id','$FoodSt','$clgFee','$hostalFee','$MedicineSt','$MobileSt','$TravellingSt')";
 		$getResult=mysqli_query($mysqli,$stdquery);
 		
+		$reportincome=$tsum+$aincome;
+		$reportexpenditures=$homeexpenditure+$feesexpenditures+$mRent+$personalexpenditures;
+		$reportdeposit=$reportincome-$reportexpenditures;
 		
-		
-		
+		//echo $reportincome." income";
+		//echo $reportexpenditures." expenditures";
+		//echo $reportdeposit." deposit";
+		$reportquery="INSERT INTO `report`(`sr_no`, `applicant_id`, `result_name`, `result_father`, `result_cnic`, `result_mobile`, `result_income`, `result_worth`, `result_expenditures`, `result_fund_available`, `result_depisable`)
+		VALUES (NULL,'$applicant_id','$applicant_name','$applicant_father','$applicant_cnic','$applicant_mobile','$reportincome','$reportworth','$reportexpenditures','$reportfund','$reportdeposit')";
+		$report=mysqli_query($mysqli,$reportquery); 
 		
 		}
 		

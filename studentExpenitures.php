@@ -1,10 +1,11 @@
 <DIV class="product-item float-clear">
 <div class="container col-sm-12" >
 	
+<div class="col-sm-12">
+	<h2>Applicant Expenditures</h2>
+</div>
 
-<H1>Applicant Expenditures </h1>
-
-<table class="table table-hover">
+<table class="table table-hover" style="width:40%; margin-left:10%;">
 <tr>
 <th>College Fee <span id="clgFee-error" class="signup-error"></span></th>
 <th>Hostal Fee <span id="hostalFee-error" class="signup-error"></span></th>
@@ -37,8 +38,8 @@
 	
 
 
-<
-<table class="table table-hover">
+
+<table class="table table-hover" style="width:40%; margin-left:10%;">
 <tr>
 <th>Medicine <span id="MedicineSt-error" class="signup-error"></span></th>
 <th>Mobile <span id="MobileSt-error" class="signup-error"></span></th>

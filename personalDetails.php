@@ -17,12 +17,14 @@
 			<div><input type="text" name="applicant_name" id="name" placeholder="Enter your Name" class="form-control"/></div>
 		</div>
 		<div class="col-sm-3">
-			<label>CNIC No.</label><span id="cnic-error" class="signup-error"></span>
-			<div><input type="text" name="applicant_cnic" id="applicant_cnic" placeholder="Enter your cnic without dashes" class="form-control"/></div>
+			<label>Father Name:</label><span id="name-error" class="signup-error"></span>
+			<div><input type="text" name="applicant_father" id="name" placeholder="Enter your Father Name" class="form-control"/></div>
 		</div>
 		<div class="col-sm-2">
 			
 		</div>
+		
+		
 	</div>
 	
 	<div class="col-sm-12">
@@ -30,17 +32,21 @@
 		<div class="col-sm-1">
 			
 		</div>
+		<div class="col-sm-2">
+			<label>CNIC No.</label><span id="cnic-error" class="signup-error"></span>
+			<div><input type="text" name="applicant_cnic" id="applicant_cnic" placeholder="Enter your cnic without dashes" class="form-control"/></div>
+		</div>
 		<div class="col-sm-3">
 			<label>Email:</label><span id="email-error" class="signup-error"></span>
 			<div><input type="text" name="applicant_email" id="email" placeholder="Enter your Email (example@domain.com)" class="form-control" /></div>
 
 		</div>
-		<div class="col-sm-3">
+		<div class="col-sm-2">
 			<label for="Age">Age:</label><br>
 			<select name="applicant_age"class="form-control 1-100" ></select> 
 		</div>
 	
-		<div class="col-sm-3">
+		<div class="col-sm-2">
 			<label>Place of Birth:</label><span id="birth-error" class="signup-error"></span>
 			<select name="applicant_birth_place" id="applicant_birth_place" class="form-control">
 				<option value="Afghanistan">Afghanistan</option>
@@ -284,6 +290,7 @@
 				<option value="Zimbabwe">Zimbabwe</option>
 			</select>
 		</div>
+		
 
 		<div class="col-sm-2">
 			

@@ -36,11 +36,11 @@ if($("#ik-field").css('display') != 'none'){
 	if(!$("#EIcomp").val().match(/^[a-zA-Z ]*$/)) {
 		$("#EIcomp-error").html("Invalid Input!");
 		output = false;
-	}
+	}/*
 	if(!$("#EIAdd").val().match(/^[\w-\.]*$/)) {
 		$("#EIAdd-error").html("Invalid Input!");
 		output = false;
-	}
+	}*/
 	if(!$("#EImob").val().match(/^03[0-4][0-9][0-9]{7}$/)) {
 		$("#EImob-error").html("Invalid Input!");
 		output = false;
@@ -408,10 +408,7 @@ if($("#Expen-field").css('display') != 'none'){
 		output = false;
 	}
 	
-	if(!$("#totala").val().match(/^[0-9]*$/)) {
-		$("#totala-error").html("Invalid Input!");
-		output = false;
-	}
+	
 	
 	if(!$("#food").val().match(/^[0-9]+$/)) {
 		$("#food-error").html("Invalid Input!");

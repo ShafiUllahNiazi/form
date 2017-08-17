@@ -1,10 +1,12 @@
 <DIV class="product-item float-clear">
 <div class="container col-sm-12" >
 	
+<div class="col-sm-12">
+	<h2>Expenditures</h2>
+</div>
 
-<H1>Expenditures </h1>
 <h4>Last Month Utilities Paid</h4>
-<table class="table table-hover">
+<table class="table table-hover" style="width:83%; ">
 <tr>
 <th>Telephone <span id="tel-error" class="signup-error"></span></th>
 <th>Electricity <span id="elec-error" class="signup-error"></span></th>
@@ -45,14 +47,14 @@
 
 
 <h4>Average of Last Six Months (Per Month Utilities Charges)</h4>
-<table class="table table-hover">
+<table class="table table-hover" style="width:83%; ">
 <tr>
 <th>Telephone <span id="tela-error" class="signup-error"></span></th>
 <th>Electricity <span id="eleca-error" class="signup-error"></span></th>
 <th>Gas<span id="gasa-error" class="signup-error"></span></th>
 <th>Water<span id="watera-error" class="signup-error"></span></th>
 <th>Mobile<span id="moba-error" class="signup-error"></span></th>
-<th>Total<span id="totala-error" class="signup-error"></span></th>
+
 
 
 </tr>
@@ -76,38 +78,56 @@
 <td>
 	<input type="text" name="mob6" id="moba" class="form-control"/>
 </td>
-<td>
-	<input type="text" name="total6" id="totala"class="form-control"/>
-</td>
+
 </tr>
 
 
 </table>
 </DIV>
 
-<div class="col-sm-12" >
 
-	<div class="col-sm-2" >
-	<label>Monthly Food /Kitchen Expenditures</label><span id="food-error" class="signup-error"></span>
+<div class="container col-sm-12" >
+	
 
-		<input type="text" name="food" id="food" class="form-control" />
-	</div>
-	<div class="col-sm-2" >
-	<label>Servant Salaries (Per month)</label><span id="servant-error" class="signup-error"></span>
 
-		<input type="text" name="servant" id="servant" class="form-control" />
-	</div>
-	<div class="col-sm-4" >
-	<label>Medical Expenditures: Average of last six months (Per Month Expenditure)</label><span id="medical-error" class="signup-error"></span>
+<h4>Average of Last Six Months (Per Month Utilities Charges)</h4>
+<table class="table table-hover" style="width:83%; ">
+<tr>
+<th>Monthly Food /Kitchen Expenditures<span id="food-error" class="signup-error"></span></th>
+<th>Servant Salaries (Per month)<span id="servant-error" class="signup-error"></span></th>
+<th>Medical Expenditures<span id="medical-error" class="signup-error"></span></th>
+<th>Travelling/ Miscellaneous Expenditures<span id="mics-error" class="signup-error"></span></th>
 
-		<input type="text" name="medical" id="medical" class="form-control" />
-	</div>
-	<div class="col-sm-4" >
-	<label>Travelling/ Miscellaneous Expenditures
-Average of last six months (Per Month Expenditure)</label><span id="mics-error" class="signup-error"></span>
 
-		<input type="text" name="travel" id="mics" class="form-control" />
-	</div>
 
-</div>
+
+</tr>
+<tr>
+<td>
+	<input type="text" name="food" id="food" class="form-control" />
+</td>
+<td>
+	<input type="text" name="servant" id="servant" class="form-control" />
+</td>
+<td>
+
+<input type="text" name="medical" id="medical" class="form-control" />
+
+</td>
+<td>
+	<input type="text" name="travel" id="mics" class="form-control" />
+</td>
+
+
+</tr>
+
+
+</table>
+</DIV>
+
+
+
+
+
+
 </div>

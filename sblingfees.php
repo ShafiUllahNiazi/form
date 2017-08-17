@@ -1,5 +1,7 @@
 <DIV class="product-item float-clear" >
 <div class=" col-sm-12" >
+
+	
 	<div class=" col-sm-1" >
 		
 	</div>

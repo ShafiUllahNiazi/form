@@ -1,13 +1,13 @@
-<DIV class="product-item float-clear">
+<DIV class="product-item float-clear" style="width:70%; margin-left:10%; ">
 <div class="container col-sm-12" >
 	
 
-<H1>Asset Income </h1>(on monthly basis)
-<table class="table table-hover">
+
+<table class="table table-hover" >
 <tr>
-<th>Income Source </th>
-<th>Relation </th>
-<th>Total<span id="assetIncome-error" class="signup-error"></span></th>
+<th class="col-sm-3">Income Source </th>
+<th class="col-sm-3">Relation </th>
+<th class="col-sm-3">Total<span id="assetIncome-error" class="signup-error"></span></th>
 
 
 </tr>
@@ -42,8 +42,11 @@
 
 </td>
 </tr>
-<DIV class="float-left"><input type="checkbox" name="item_index[]" class="form-control"/></DIV><br>
+<br>
 
 </table>
+
+
 </DIV>
+<DIV class="float-left"><input type="checkbox" name="item_index[]" class="form-control"/></DIV>
 </div>

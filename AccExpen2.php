@@ -1,7 +1,10 @@
 <div class="container col-sm-12">
 <div class="container col-sm-12">
 	
-	<label><h2>Accommodation Expenditures</h2></label><br><br>
+	<div class="col-sm-12">
+		<h2>Accommodation Expenditures</h2>
+	</div>
+	
 
 </div>
 
@@ -22,9 +25,9 @@
 	<label class="radio-inline">
 	<input type="radio" name="housetype" value="VillageHouse"> Village House</input>
 	</label>
-<br><br><br><br>
 
-</div><br><br>
+
+</div>
 <div class="col-sm-6">
 
 	<p><b>Status:</b></p>
@@ -38,8 +41,8 @@
 	<label class="radio-inline">
 	<input type="radio" name="Rented" value="GovtOwned<"> Employer / Govt Owned</input>
 	</label>
-<br><br>	<br><br>
-</div><br><br>
+
+</div>
 <div class="col-sm-6">
 
 	<p><b>If Self or Family Owned, then state how it is acquired?</b></p>
@@ -53,8 +56,8 @@
 	<label class="radio-inline">
 	<input type="radio" name="Inherited" value="Purchased"> Purchased</input>
 	</label>
-<br><br>
-</div><br><br>
+
+</div>
 <div class="col-sm-6">
 
 	<p><b>Rent Payment:</b></p>
@@ -68,18 +71,18 @@
 	<label class="radio-inline">
 	<input type="radio" name="Self" value="Others"> Others</input>
 	</label>
-<br><br>	
-</div><br><br>
+	
+</div>
 <div class="col-sm-12">
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 		<label>House Plot Size in Sq. ft.	</label><span id="size-error" class="signup-error"></span><br>
 		<input type="text" name="PlotSize" id="sizee" class="form-control"><br>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 		<label>Covered Area in Sq. ft.	</label><span id="area-error" class="signup-error"></span><br>
 		<input type="text" name="CoveredArea" id="areaa" class="form-control"><br>
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 		<label>Current Market Value	</label><span id="value-error" class="signup-error"></span><br>
 		<input type="text" name="CurrentMarketValue" id="valuee" class="form-control"><br>
 		</div>
@@ -88,12 +91,12 @@
 <div class="col-sm-12">
 		<label>Accommodation Location /Address	</label>
 		<div>
-		<textarea name="AAdd"  id="AAdd"rows="10" cols="73" >   </textarea>
+		<textarea name="AAdd"  id="AAdd"rows="4" cols="73" >   </textarea>
 		
 		</div>
 </div>
 <div class="col-sm-12">
-<div class="col-sm-4">
+<div class="col-sm-3">
 		<label>Number Of Bedrooms</label>
 		<div>
 		<select name="BedRoom" id="BedRoom" class="form-control">
@@ -105,7 +108,7 @@
 		</select></div>
 
 </div>
-<div class="col-sm-4">
+<div class="col-sm-3">
 		<label>Number Of Airconditioners</label>
 		<div>
 		<select name="Airconditioner" id="Airconditioner" class="form-control">
@@ -117,7 +120,7 @@
 		</select></div>
 
 </div >
-<div class="col-sm-4">
+<div class="col-sm-3">
 		<label>Accommodation Monthly Rent	</label><span id="mRent-error" class="signup-error"></span>
 		<div>
 		<input type="text" name="mRent" id="mRent" class="form-control"><br>
