@@ -76,15 +76,15 @@
 <div class="col-sm-12">
 		<div class="col-sm-3">
 		<label>House Plot Size in Sq. ft.	</label><span id="size-error" class="signup-error"></span><br>
-		<input type="text" name="PlotSize" id="sizee" class="form-control"><br>
+		<input type="text" name="PlotSize" id="sizee" placeholder="plot size in square ft." class="form-control"><br>
 		</div>
 		<div class="col-sm-3">
 		<label>Covered Area in Sq. ft.	</label><span id="area-error" class="signup-error"></span><br>
-		<input type="text" name="CoveredArea" id="areaa" class="form-control"><br>
+		<input type="text" name="CoveredArea" id="areaa" placeholder="Covered Area in square ft." class="form-control"><br>
 		</div>
 		<div class="col-sm-3">
 		<label>Current Market Value	</label><span id="value-error" class="signup-error"></span><br>
-		<input type="text" name="CurrentMarketValue" id="valuee" class="form-control"><br>
+		<input type="text" name="CurrentMarketValue" id="valuee" placeholder="Current Market Value in Rupees"  class="form-control"><br>
 		</div>
 		
 </div>
@@ -117,13 +117,14 @@
 		<option value="4-6">4-6</option>
 		<option value="6-8">6-8</option>
 		<option value="Above 8">Above 8</option>
+		<option value="none">none</option>
 		</select></div>
 
 </div >
 <div class="col-sm-3">
 		<label>Accommodation Monthly Rent	</label><span id="mRent-error" class="signup-error"></span>
 		<div>
-		<input type="text" name="mRent" id="mRent" class="form-control"><br>
+		<input type="text" name="mRent" id="mRent" placeholder="ccommodation Monthly Rent in Rupees" class="form-control"><br>
 		</div>
 </div>
 

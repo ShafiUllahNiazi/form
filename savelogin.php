@@ -10,7 +10,7 @@ $query="SELECT * FROM users_account WHERE username='$username' AND pwd='$passwor
   $query_run=mysqli_query($mysqli,$query);
   if(mysqli_fetch_assoc($query_run)){
     $_SESSION['username']=$username;
-     header("location:index.php");
+     header("location:index.php?username='".$username."'");
   
   }
   else{

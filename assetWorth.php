@@ -31,7 +31,7 @@
 						</select>
 					</td>
 					<td>
-						<input type="text" name="AssetTotal[]" id="assett" class="form-control"/>
+						<input type="text" name="AssetTotal[]" id="assett" placeholder="Current Market Value in Pak. Rs." class="form-control"/>
 					</td>
 				</tr>
 			</table>

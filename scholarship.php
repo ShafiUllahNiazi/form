@@ -22,7 +22,7 @@
 <tr>
 <td>
 
-<input type="text" name="scholarship_institute[]" id="ScholarshipIns" class="form-control"/>
+<input type="text" name="scholarship_institute[]" id="ScholarshipIns" placeholder="School/college Name" class="form-control"/>
 </div></td>
 <td>
 
@@ -38,17 +38,17 @@
 </td>
 <td>
 
-<input type="text" name="scholarship_name[]" id="ScholarshipName" class="form-control"/>
+<input type="text" name="scholarship_name[]" id="ScholarshipName" placeholder="Scholarship Name"  class="form-control"/>
 
 </td>
 <td>
 
-<input type="text" name="scholarship_amount[]"id="ScholarshipAmount" class="form-control"/>
+<input type="text" name="scholarship_amount[]"id="ScholarshipAmount" placeholder="in Rupees" class="form-control"/>
 
 </td>
 <td>
 
-<input type="text" name="scholarship_period[]" id="ScholarshipPeriod" class="form-control"/>
+<input type="text" name="scholarship_period[]" id="ScholarshipPeriod" placeholder="in year" class="form-control"/>
 
 </td>
 </tr>

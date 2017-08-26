@@ -38,7 +38,7 @@
 </td>
 <td>
 
-<input type="text" name="price_astincone[]" id="assetIncome" class="form-control"/>
+<input type="text" name="price_astincone[]" id="assetIncome" placeholder="Total of Asset in Rupees" class="form-control"/>
 
 </td>
 </tr>

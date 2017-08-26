@@ -37,7 +37,7 @@ if($("#ik-field").css('display') != 'none'){
 		$("#EIcomp-error").html("Invalid Input!");
 		output = false;
 	}/*
-	if(!$("#EIAdd").val().match(/^[\w-\.]*$/)) {
+	if(!$("#EIAdd").val().match(/^[a-z0-9 .\ ]*$/)) {
 		$("#EIAdd-error").html("Invalid Input!");
 		output = false;
 	}*/
@@ -97,7 +97,7 @@ if($("#Land-field").css('display') != 'none'){
 		$("#lsize-error").html("Invalid Input!");
 		output = false;
 	}
-	if(!$("#llocation").val().match(/^[0-9]*$/)) {
+	if(!$("#llocation").val().match(/^[a-zA-Z0-9 .\-]*$/)) {
 		$("#llocation-error").html("Invalid Input!");
 		output = false;
 	}
@@ -286,8 +286,8 @@ if($("#family-field").css('display') != 'none'){
 	
 	
 	
-	if(!$("#applicant_residence_telephone").val().match(/^[a-zA-Z]*$/)) {  
-		$("#telephone-error").html("Invalid Mobile!");
+	if(!$("#applicant_residence_telephone").val().match(/^[0-9]*$/)) {  
+		$("#telephone-error").html("Invalid Telephone!");
 		output = false;
 	}
 	

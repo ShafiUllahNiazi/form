@@ -91,7 +91,7 @@
 
 <div class=" col-sm-3">
 	<DIV class="col-sm-12 ">Address<span id="EIAdd-error" class="signup-error"></span></DIV>
-	<DIV class="float-left"><textarea name="address[]"  id="EIAdd" placeholder="Type address" rows="4" cols="73" >   </textarea></DIV>
+	<DIV class="float-left"><textarea name="address[]"  id="EIAdd" placeholder="Type address here" rows="4" cols="73" ></textarea></DIV>
 	<!--<DIV class="float-left"><input type="text" name="address[]" id="EIAdd" class="form-control"/></DIV>-->
 
 </div>

@@ -19,22 +19,22 @@
 <tr>
 <td>
 
-	<input type="text" name="tel" id="tel" class="form-control"/>
+	<input type="text" name="tel" id="tel" placeholder="in Rupees" class="form-control"/>
 
 </td>
 <td>
-	<input type="text" name="elec" id="elec" class="form-control"/>
+	<input type="text" name="elec" id="elec" placeholder="in Rupees" class="form-control"/>
 </td>
 <td>
 
-<input type="text" name="gas" id="gas" class="form-control"/>
+<input type="text" name="gas" id="gas" placeholder="in Rupees" class="form-control"/>
 
 </td>
 <td>
-	<input type="text" name="water" id="water" class="form-control"/>
+	<input type="text" name="water" id="water" placeholder="in Rupees" class="form-control"/>
 </td>
 <td>
-	<input type="text" name="mob" id="mob" class="form-control"/>
+	<input type="text" name="mob" id="mob" placeholder="in Rupees" class="form-control"/>
 </td>
 </tr>
 
@@ -61,22 +61,22 @@
 <tr>
 <td>
 
-	<input type="text" name="tel6" id="tela" class="form-control"/>
+	<input type="text" name="tel6" id="tela" placeholder="in Rupees" class="form-control"/>
 
 </td>
 <td>
-	<input type="text" name="elec6" id="eleca" class="form-control"/>
+	<input type="text" name="elec6" id="eleca" placeholder="in Rupees" class="form-control"/>
 </td>
 <td>
 
-<input type="text" name="gas6" id="gasa" class="form-control"/>
+<input type="text" name="gas6" id="gasa" placeholder="in Rupees" class="form-control"/>
 
 </td>
 <td>
-	<input type="text" name="water6" id="watera" class="form-control"/>
+	<input type="text" name="water6" id="watera" placeholder="in Rupees" class="form-control"/>
 </td>
 <td>
-	<input type="text" name="mob6" id="moba" class="form-control"/>
+	<input type="text" name="mob6" id="moba" placeholder="in Rupees" class="form-control"/>
 </td>
 
 </tr>
@@ -104,18 +104,18 @@
 </tr>
 <tr>
 <td>
-	<input type="text" name="food" id="food" class="form-control" />
+	<input type="text" name="food" id="food" placeholder="in Rupees" class="form-control" />
 </td>
 <td>
-	<input type="text" name="servant" id="servant" class="form-control" />
+	<input type="text" name="servant" id="servant" placeholder="in Rupees" class="form-control" />
 </td>
 <td>
 
-<input type="text" name="medical" id="medical" class="form-control" />
+<input type="text" name="medical" id="medical" placeholder="in Rupees" class="form-control" />
 
 </td>
 <td>
-	<input type="text" name="travel" id="mics" class="form-control" />
+	<input type="text" name="travel" id="mics" placeholder="in Rupees" class="form-control" />
 </td>
 
 

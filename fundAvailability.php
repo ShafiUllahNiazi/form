@@ -27,7 +27,7 @@
 
 					</td>
 					<td>
-						<input type="text" name="icome_price1[]" id="fundTotal" class="form-control"/>
+						<input type="text" name="icome_price1[]" id="fundTotal" placeholder="in Rupees" class="form-control"/>
 					</td>
 				</tr>
 			</table>

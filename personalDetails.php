@@ -1,3 +1,13 @@
+<?php
+
+function text(){
+				$url=$_SERVER["REQUEST_URI"];
+				$hold= str_replace("/form/index.php?username=%27","",$url);
+				$hold1=str_replace("%27","",$hold);
+				echo $hold1;
+				return $hold1;
+}
+?>
 <div class="product-item float-clear">
 	
 	<div class="col-sm-12">
@@ -10,7 +20,8 @@
 		</div>
 		<div class="col-sm-3">
 			<label>Applicant Namal ID / Roll Number:</label>
-			<div><input type="text" name="applicant_id" id="applicant_id" class="form-control" /></div>
+		                                             
+			<div><input type="text" value='<?php text() ?>'  name="applicant_id" id="applicant_id" placeholder="Namal Id / UOB Number" readonly class="form-control"  /></div>
 		</div>
 		<div class="col-sm-3">
 			<label>Name:</label><span id="name-error" class="signup-error"></span>
@@ -335,7 +346,8 @@
 		</div>
 		<div class="col-sm-9">
 			<label>Present Address:</label><br/>
-			<textarea name="applicant_present_address"  id="applicant_present_address"rows="2" cols="73" >   </textarea>
+			
+			<textarea name="applicant_present_address"  id="applicant_present_address" placeholder="type your present address here" rows="2" cols="73" ></textarea>
 		</div>
 		
 	</div>
@@ -357,7 +369,7 @@
 		</div>
 		<div class="col-sm-9">
 			<label>Permanent Address:</label><br/>
-		<textarea name="applicant_permenent_address" id="applicant_permenent_address" rows="2" cols="73" >   </textarea>
+		<textarea name="applicant_permenent_address" id="applicant_permenent_address" placeholder="type your permanent address here"  rows="2" cols="73" ></textarea>
 		</div>
 		
 	</div>

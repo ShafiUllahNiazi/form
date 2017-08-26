@@ -3,6 +3,14 @@ session_start();
 if(!$_SESSION['username']){
 header("location:Login.php");
 }
+function functionName() {
+   if (headers_sent()) {
+		die("<h1><a href='report.php'>Redirect failed. Please click on this link:</a> </h1>");
+		}
+		else{
+		exit(header("Location: /report.php"));
+		}
+}
 ?>
 <html>
 <head>
@@ -158,7 +166,7 @@ function deleteAssetIncome() {
 
 	<div class="message"><?php if(isset($message)) echo $message; ?></div>
 		<ul id="signup-step">
-			<li id="personal" class="active">Personal Detail</li>
+			<li id="personal" class="active">Personal Detail</li><!--
 			<li id="family" >Family Detail</li>
 			<li id="sblings1" >Siblings Detail</li>
 			<li id="ik">Earning Information</li>
@@ -173,7 +181,7 @@ function deleteAssetIncome() {
 			<li id="password">Funds Availabe For Study</li>
 			<li id="usman">Applicant Educational Record</li>
 			<li id="scholarship">Scholarship</li>
-			<li id="file">Documents Upload</li>
+			<li id="file">Documents Upload</li>-->
 			<li id="terms">Terms and Conditions</li>
 	
 	
@@ -221,6 +229,16 @@ function deleteAssetIncome() {
 				<DIV id="productik">
 					<?php require_once("earningInfo.php") ?>
 				</DIV>
+				<div>
+		<pre>
+		*** Family Member Occupation classification
+		1. Government Service (Specify the employment grade BPS/SPS/PTC etc.)
+		2. Private Job
+		3. Agriculture/Farming
+		4. Own Business (Self Employed). Details/nature of self-business need to filled in at remarks column
+		5. Others. Details/nature of self-business need to filled in at remarks column
+		</pre>
+				</div>
 				<DIV class="btn-action float-clear">
 					<input class="btn btn-success" type="button" name="add_item" value="Add More" onClick="addMoreik();" />
 					<input class="btn btn-danger" type="button" name="del_item" value="Delete" onClick="deleteRowik();" />
@@ -231,6 +249,7 @@ function deleteAssetIncome() {
 		<div id="AssetIncome1-field" style="display:none;">
 			<div style="width:70%; margin-left:10%; ">
 				<h2>Asset Income</h2>(on monthly basis)
+				<p>* For sources with annual income returns, kindly report the monthly income earned</p>
 			</div>
 		
 			<DIV id="outer">
@@ -326,6 +345,9 @@ function deleteAssetIncome() {
 				<DIV id="product">
 					<?php require_once("fundAvailability.php") ?>
 				</DIV>
+				<DIV class=" col-sm-12">
+					<?php require_once("fundAvailabilityLoanDetail.php") ?>
+				</DIV>
 				<DIV class="btn-action float-clear">
 					<input class="btn btn-success" type="button" name="add_item" value="Add More" onClick="addMore();" />
 					<input class="btn btn-danger" type="button" name="del_item" value="Delete" onClick="deleteRow();" />
@@ -387,7 +409,9 @@ function deleteAssetIncome() {
 			<input class="btnAction btn btn-danger delete" type="submit" disabled="disabled" name="finish" id="finish" value="Finish" style="display:none;"/>
 			<input name="h" type="hidden" id="h" value="0" />
 		</div>
+		
 	</form>
+	
 <script>
 	$(function(){
     var $select = $(".1-100");
@@ -951,6 +975,28 @@ $check=mysqli_query($mysqli,$query);
 		$reportquery="INSERT INTO `report`(`sr_no`, `applicant_id`, `result_name`, `result_father`, `result_cnic`, `result_mobile`, `result_income`, `result_worth`, `result_expenditures`, `result_fund_available`, `result_depisable`)
 		VALUES (NULL,'$applicant_id','$applicant_name','$applicant_father','$applicant_cnic','$applicant_mobile','$reportincome','$reportworth','$reportexpenditures','$reportfund','$reportdeposit')";
 		$report=mysqli_query($mysqli,$reportquery); 
+		
+		
+		
+		
+		functionName();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		}
 		

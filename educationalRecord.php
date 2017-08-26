@@ -16,11 +16,11 @@
 		</select>
 		</td>
 		<td>
-			<input type="text" name="institute[]" id="nameofIns" class="form-control"/>
+			<input type="text" name="institute[]" id="nameofIns" placeholder="Name Of Institution" class="form-control"/>
 		</td>
 		<td>
 
-		<input type="text" name="fee_monthly[]" id="pmFee" class="form-control"/>
+		<input type="text" name="fee_monthly[]" id="pmFee" placeholder="in Rupees" class="form-control"/>
 
 		</td>
 		</tr>
@@ -39,12 +39,12 @@
 
 			
 			
-			<input type="text" name="from_year[]" id="fromYFee" class="form-control"/>
+			<input type="text" name="from_year[]" id="fromYFee" placeholder="month-year" class="form-control"/>
 
 		</td>
 		<td>
 			
-			<input type="text" name="to_year[]" id="toYFee" class="form-control"/>
+			<input type="text" name="to_year[]" id="toYFee" placeholder="month-year" class="form-control"/>
 
 		</td>
 		<td>

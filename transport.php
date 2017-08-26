@@ -22,19 +22,19 @@
 </tr>
 <tr>
 <td>
-	<input type="text" name="TransportType[]" id="tType" class="form-control"/>
+	<input type="text" name="TransportType[]" id="tType" placeholder="Transport Type" class="form-control"/>
 </td>
 <td>
-	<input type="text" name="Model[]" id="tmodel" class="form-control"/>
+	<input type="text" name="Model[]" id="tmodel" placeholder="Model" class="form-control"/>
 </td>
 <td>
-	<input type="text" name="EngineCapacity[]" id="tCC" class="form-control"/>
+	<input type="text" name="EngineCapacity[]" id="tCC" placeholder=" Engine Capacity (CC)" class="form-control"/>
 </td>
 <td>
-	<input type="text" name="RegNo[]" id="tReg" class="form-control"/>
+	<input type="text" name="RegNo[]" id="tReg" placeholder="Reg No." class="form-control"/>
 </td>
 <td>
-	<input type="text" name="OwnPeriod[]" id="townP" class="form-control"/>
+	<input type="text" name="OwnPeriod[]" id="townP" placeholder="in years" class="form-control"/>
 </td>
 
 </tr>
