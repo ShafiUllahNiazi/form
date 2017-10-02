@@ -166,7 +166,7 @@ function deleteAssetIncome() {
 
 	<div class="message"><?php if(isset($message)) echo $message; ?></div>
 		<ul id="signup-step">
-			<li id="personal" class="active">Personal Detail</li><!--
+			<li id="personal" class="active">Personal Detail</li>
 			<li id="family" >Family Detail</li>
 			<li id="sblings1" >Siblings Detail</li>
 			<li id="ik">Earning Information</li>
@@ -181,7 +181,7 @@ function deleteAssetIncome() {
 			<li id="password">Funds Availabe For Study</li>
 			<li id="usman">Applicant Educational Record</li>
 			<li id="scholarship">Scholarship</li>
-			<li id="file">Documents Upload</li>-->
+			<li id="file">Documents Upload</li>
 			<li id="terms">Terms and Conditions</li>
 	
 	

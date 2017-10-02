@@ -28,8 +28,8 @@ function text(){
 			<div><input type="text" name="applicant_name" id="name" placeholder="Enter your Name" class="form-control"/></div>
 		</div>
 		<div class="col-sm-3">
-			<label>Father Name:</label><span id="name-error" class="signup-error"></span>
-			<div><input type="text" name="applicant_father" id="name" placeholder="Enter your Father Name" class="form-control"/></div>
+			<label>Father Name:</label><span id="applicant_father_name-error" class="signup-error"></span>
+			<div><input type="text" name="applicant_father" id="applicant_father" placeholder="Enter your Father Name" class="form-control"/></div>
 		</div>
 		<div class="col-sm-2">
 			

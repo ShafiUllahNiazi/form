@@ -255,6 +255,10 @@ if($("#personal-field").css('display') != 'none') {
 		$("#name-error").html("Invalid Name!");
 		output = false;
 	}
+		if(!$("#applicant_father").val().match(/^[a-zA-Z ]+$/)) {
+		$("#applicant_father_name-error").html("Invalid Name!!!");
+		output = false;
+	}
 	
 	if(!$("#applicant_cnic").val().match(/^[1-9][0-9]{12}$/)) {
 		$("#cnic-error").html("Invalid Cnic!");
